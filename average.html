@@ -1,0 +1,22 @@
+// Find the Average of Positive Numbers in an Array
+
+<script>
+function average(array) {
+  let sum = 0;
+  let count = 0;
+  for (let num of array) {
+    if (num > 0) {
+      sum += num;
+      count++;
+    }
+  }
+  
+  if (count === 0) {
+    return 0;
+  }
+  
+  return sum / count;
+}
+console.log(average([10, 20, 30, -40, 50])); 
+console.log(average([-1,-2,-3,4]));    
+</script>

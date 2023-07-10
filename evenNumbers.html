@@ -1,0 +1,15 @@
+// Find the Sum of Even Numbers in an Array
+
+<script>
+function sumOfEvenNumbers(array) {
+  let sum = 0;
+  for (let num of array) {
+    if (num % 2 == 0) {
+      sum += num;
+    }
+  }
+  return sum;
+}
+console.log(sumOfEvenNumbers([1, 2, 3, 4, 5]));     
+console.log(sumOfEvenNumbers([10, 20, 30, 40, 50]));  
+</script>

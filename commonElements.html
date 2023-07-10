@@ -1,0 +1,16 @@
+// Find the Common Elements in Two Arrays
+
+<script>
+const array1 = [1, 2, 3, 4, 5];
+const array2 = [2, 4, 5, 6, 7];
+const commonElements = [];
+for (let i = 0; i < array1.length; i++) {
+  for (let j = 0; j < array2.length; j++) {
+    if (array1[i] == array2[j]) {
+      commonElements.push(array1[i]);
+      break;
+    }
+  }
+}
+console.log(commonElements);
+</script>

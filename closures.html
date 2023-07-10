@@ -1,0 +1,13 @@
+//  Closure with Function Factory
+
+<script>
+ function greeting(message) {
+  return function(name) {
+    console.log(message + ', ' + name );
+  };
+}
+const sayHello = greeting('Hello');
+const sayGoodbye = greeting('Goodbye');
+sayHello('Sneka');     
+sayGoodbye('sri');   
+</script>

@@ -1,0 +1,9 @@
+// Loop Through JSON Array
+
+<script>
+let jsonArray = '[{"name": "Sneka", "age": 21}, {"name": "sri", "age": 19}]';
+let array = JSON.parse(jsonArray);
+for (let i = 0; i < array.length; i++) {
+  console.log(array[i].name, array[i].age);
+}
+</script>

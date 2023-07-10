@@ -1,0 +1,13 @@
+// Check if a Number is Prime
+
+<script>
+let num = 7;
+let Prime = true;
+for (let i = 2; i <= Math.sqrt(num); i++) {
+  if (num % i == 0) {
+    Prime = false;
+    break;
+  }
+}
+console.log(Prime);
+</script>

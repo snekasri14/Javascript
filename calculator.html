@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" id="result" readonly>
+        <div class="button-row">
+            <div class="button operator" onclick="appendToResult('/')">/</div>
+            <div class="button" onclick="appendToResult(7)">7</div>
+            <div class="button" onclick="appendToResult(8)">8</div>
+            <div class="button" onclick="appendToResult(9)">9</div>
+        </div>
+        <div class="button-row">
+            <div class="button operator" onclick="appendToResult('*')">x</div>
+            <div class="button" onclick="appendToResult(4)">4</div>
+            <div class="button" onclick="appendToResult(5)">5</div>
+            <div class="button" onclick="appendToResult(6)">6</div>
+        </div>
+        <div class="button-row">
+            <div class="button operator" onclick="appendToResult('-')">-</div>
+            <div class="button" onclick="appendToResult(1)">1</div>
+            <div class="button" onclick="appendToResult(2)">2</div>
+            <div class="button" onclick="appendToResult(3)">3</div>
+        </div>
+        <div class="button-row">
+            <div class="button operator" onclick="appendToResult('+')">+</div>
+            <div class="button" onclick="appendToResult(0)">0</div>
+            <div class="button" onclick="appendToResult('.')">.</div>
+            <div class="button equals" onclick="calculateResult()">=</div>
+            <div class="button operator" onclick="appendToResult('^')">+</div>
+        </div>
+        <div class="button-row">
+            <div class="button clear" onclick="clearResult()">C</div>
+        </div>
+    </div>
+
+<style>
+        .calculator {
+            width: 190px;
+            margin: 20px solid;
+            border: 2px black;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .input{
+            border: 2px solid #333;
+        }
+
+        .button-row {
+            display: flex;
+        }
+
+        .button-row >.button {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #333;
+            cursor: pointer;
+            background-color: rgba(47, 43, 43,0.5);
+        }
+    </style>
+    
+    <script>
+    function appendToResult(value) {
+            document.getElementById('result').value += value;
+        }
+
+    function calculateResult() {
+            var result = document.getElementById('result').value;
+            var calculatedResult = eval(result);
+            document.getElementById('result').value = calculatedResult;
+        }
+
+    function clearResult() {
+            document.getElementById('result').value = '';
+        }
+
+    </script>
+    </body>
+</html>
